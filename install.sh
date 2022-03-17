@@ -9,6 +9,9 @@ git clone --recursive https://github.com/RebornHugo/incubator-mxnet mxnet -b v1.
 # build with multiprocess
 cd mxnet
 cp config/linux_gpu.cmake config.cmake
+
+# build for all supported GPUs
+sed -i 's/MXNET_CUDA_ARCH "Auto"/MXNET_CUDA_ARCH "All"/' config.cmake
 mkdir build
 cd build
 cmake ..
