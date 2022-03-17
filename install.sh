@@ -4,7 +4,7 @@
 sudo apt install gfortran
 
 # pull repo with 3party
-git clone --recursive https://github.com/apache/incubator-mxnet mxnet -b v1.9.x
+git clone --recursive https://github.com/RebornHugo/incubator-mxnet mxnet -b v1.9.x
 
 # build with multiprocess
 cd mxnet
