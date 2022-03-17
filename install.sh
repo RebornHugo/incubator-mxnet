@@ -4,7 +4,7 @@
 sudo apt install gfortran
 
 # pull repo with 3party
-git clone --recursive https://github.com/apache/incubator-mxnet mxnet
+git clone --recursive https://github.com/apache/incubator-mxnet mxnet -b v1.9.x
 
 # build with multiprocess
 cd mxnet
@@ -13,6 +13,7 @@ mkdir build
 cd build
 cmake ..
 cmake --build . --parallel $(($(nproc --all)/2))
+cd ..
 
 # install with related things
 python3 -m pip install --user -e ./python
